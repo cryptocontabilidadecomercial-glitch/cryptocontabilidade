@@ -3,7 +3,7 @@
    1) Cole abaixo a URL do seu Google Apps Script (ver README-LEADS.md)
    2) Enquanto vazio, os formulários usam o WhatsApp como fallback
    ============================================================ */
-const LEAD_ENDPOINT = ""; // ex.: "https://script.google.com/macros/s/XXXX/exec"
+const LEAD_ENDPOINT = "https://script.google.com/macros/s/AKfycbydDy5rdvAME2aVsBvzC59u5pwsxeZyu3Qb272ufg3dnqPtB8fpgpRazq1y6RvQvdHH-A/exec"; // ex.: "https://script.google.com/macros/s/XXXX/exec"
 const WHATS_FALLBACK = "5500000000000"; // número do WhatsApp com DDI+DDD
 
 function validarTelefone(t) {
