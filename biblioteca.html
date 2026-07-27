@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biblioteca de Conteúdos e Ferramentas | Crypto Contabilidade</title>
+<meta name="description" content="Guias, planilhas e ferramentas gratuitas para a gestão da sua empresa, produzidos pela equipe da Crypto Contabilidade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1E2A44;--navy-deep:#16213A;--navy-soft:#2A3A5C;--gold:#C79A46;--gold-light:#E0B468;--gold-deep:#A87B2E;--ink:#3E4655;--ink-soft:#6B7280;--gray:#E8EAED;--cream:#F7F5F0;--radius:14px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--ink);line-height:1.7;font-size:16.5px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Sora',sans-serif;color:var(--navy);line-height:1.25}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+.topbar{background:#fff;border-bottom:1px solid var(--gray);padding:14px 0;position:sticky;top:0;z-index:50}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px}
+.brand svg{width:38px;height:38px}
+.bn{display:flex;flex-direction:column;line-height:1.05}
+.bn b{font-family:'Chakra Petch',sans-serif;font-size:17px;letter-spacing:.14em;color:var(--navy)}
+.bn span{font-family:'Chakra Petch',sans-serif;font-size:8.5px;letter-spacing:.34em;color:var(--gold-deep);text-transform:uppercase}
+.back{font-family:'Sora',sans-serif;font-size:14px;font-weight:600;color:var(--navy);padding:9px 18px;border:1.5px solid var(--gray);border-radius:9px;transition:.2s}
+.back:hover{border-color:var(--navy)}
+.head{background:linear-gradient(135deg,var(--navy-deep),var(--navy) 60%,var(--navy-soft));padding:64px 0;position:relative;overflow:hidden}
+.head::before{content:"";position:absolute;right:-100px;top:-160px;width:440px;height:440px;border:1px solid rgba(224,180,104,.22);border-radius:50%}
+.head h1{color:#fff;font-size:clamp(28px,3.6vw,40px);margin-bottom:12px}
+.head h1 em{font-style:normal;color:var(--gold-light)}
+.head p{color:rgba(255,255,255,.75);max-width:600px;font-size:17px}
+.toolbar{padding:36px 0 8px;display:flex;gap:10px;flex-wrap:wrap}
+.chip{font-family:'Sora',sans-serif;font-size:13.5px;font-weight:600;padding:9px 20px;border-radius:99px;border:1.5px solid var(--gray);background:#fff;color:var(--ink);cursor:pointer;transition:.2s}
+.chip:hover{border-color:var(--gold)}
+.chip.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.lib{padding:28px 0 90px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.item{border:1px solid var(--gray);border-radius:var(--radius);overflow:hidden;background:#fff;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease}
+.item:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(30,42,68,.12)}
+.cover{height:130px;position:relative;display:flex;align-items:center;justify-content:center}
+.cover svg{width:44px;height:44px;stroke:#fff;opacity:.95}
+.cv-nav{background:linear-gradient(135deg,var(--navy),var(--navy-soft))}
+.cv-nv2{background:linear-gradient(135deg,var(--navy-soft),#3A4E78)}
+.cv-dp{background:linear-gradient(135deg,var(--navy-deep),var(--navy))}
+.cover::after{content:"";position:absolute;left:-10%;bottom:-100%;width:120%;height:170%;border:1px solid rgba(224,180,104,.3);border-radius:50%}
+.body{padding:24px 26px;display:flex;flex-direction:column;flex:1}
+.kind{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:9px;display:inline-flex;width:max-content;padding:4px 12px;border-radius:99px}
+.kind.f{color:var(--gold-deep);background:rgba(199,154,70,.13)}
+.kind.c{color:var(--navy-soft);background:rgba(30,42,68,.08)}
+.item h3{font-size:17.5px;margin-bottom:8px}
+.item p{font-size:14px;color:var(--ink-soft);flex:1}
+.get{margin-top:18px;font-family:'Sora',sans-serif;font-weight:600;font-size:14px;color:var(--navy);display:inline-flex;align-items:center;gap:6px}
+.get::after{content:"→";color:var(--gold-deep);transition:transform .2s}
+.item:hover .get::after{transform:translateX(4px)}
+.soon{opacity:.62;pointer-events:none}
+.soon .get{color:var(--ink-soft)}
+.soon .get::after{content:""}
+footer{background:var(--navy-deep);color:rgba(255,255,255,.6);text-align:center;padding:26px;font-size:13px}
+footer a{color:rgba(255,255,255,.75)}
+@media(max-width:980px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.grid{grid-template-columns:1fr}.head{padding:48px 0}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a href="index.html" class="brand" aria-label="Voltar ao site">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#A87B2E"/><stop offset=".55" stop-color="#C79A46"/><stop offset="1" stop-color="#E7BC6A"/></linearGradient></defs>
+        <path d="M72.1 59.2 A28 28 0 1 1 72.1 24.8" fill="none" stroke="#1E2A44" stroke-width="15"/>
+        <polygon points="5,91 45.2,43.9 95,7 54.8,54.1" fill="url(#g)"/>
+      </svg>
+      <span class="bn"><b>CRYPTO</b><span>Contabilidade</span></span>
+    </a>
+    <a href="index.html" class="back">← Voltar ao site</a>
+  </div>
+</div>
+
+<div class="head">
+  <div class="wrap">
+    <h1>Biblioteca de <em>conteúdos e ferramentas</em></h1>
+    <p>Guias práticos e ferramentas de gestão produzidos pela nossa equipe. Escolha um material, preencha seus dados e receba gratuitamente por e-mail.</p>
+  </div>
+</div>
+
+<div class="wrap toolbar">
+  <button class="chip on" data-f="todos">Todos</button>
+  <button class="chip" data-f="ferramenta">Ferramentas</button>
+  <button class="chip" data-f="conteudo">Guias e conteúdos</button>
+</div>
+
+<div class="wrap lib">
+  <div class="grid" id="grid">
+
+    <a href="leadpage-planilha.html" class="item" data-k="ferramenta">
+      <div class="cover cv-nav"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18" stroke-linecap="round"/></svg></div>
+      <div class="body">
+        <span class="kind f">Ferramenta</span>
+        <h3>Planilha de Controle Financeiro</h3>
+        <p>Fluxo de caixa com categorias prontas e painel automático: resultado, margem, ranking de despesas e alertas.</p>
+        <span class="get">Receber por e-mail</span>
+      </div>
+    </a>
+
+    <a href="leadpage-precificacao.html" class="item" data-k="ferramenta">
+      <div class="cover cv-nv2"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 3v18M7 8.5c0-1.9 2.2-3 5-3s5 1.1 5 3-2.2 2.6-5 3.2-5 1.3-5 3.3 2.2 3 5 3 5-1.1 5-3" stroke-linecap="round"/></svg></div>
+      <div class="body">
+        <span class="kind f">Ferramenta</span>
+        <h3>Planilha de Precificação</h3>
+        <p>Calcule o preço certo a partir de custos, impostos e margem desejada — com ponto de equilíbrio do mês.</p>
+        <span class="get">Receber por e-mail</span>
+      </div>
+    </a>
+
+    <a href="leadpage-reforma.html" class="item" data-k="conteudo">
+      <div class="cover cv-dp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M6 3h9l4 4v14a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z" stroke-linejoin="round"/><path d="M14 3v5h5M9 13h6M9 17h6" stroke-linecap="round"/></svg></div>
+      <div class="body">
+        <span class="kind c">Guia</span>
+        <h3>Guia da Reforma Tributária</h3>
+        <p>IBS, CBS e Imposto Seletivo explicados em linguagem simples, com o cronograma até 2033 e checklist para 2026.</p>
+        <span class="get">Receber por e-mail</span>
+      </div>
+    </a>
+
+    <a href="leadpage-regime.html" class="item" data-k="conteudo">
+      <div class="cover cv-nav"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 3v4M5 7l14-.01M7 7l-3 6a3.5 3.5 0 007 0L8 7M17 7l-3 6a3.5 3.5 0 007 0l-3-6M9 21h6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="body">
+        <span class="kind c">Guia</span>
+        <h3>Simples, Presumido ou Real?</h3>
+        <p>Como funciona cada regime tributário, quando cada um compensa e os sinais de que o seu merece revisão.</p>
+        <span class="get">Receber por e-mail</span>
+      </div>
+    </a>
+
+    <div class="item soon" data-k="ferramenta">
+      <div class="cover cv-nv2"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h3M13 11h3M8 15h3M13 15h3" stroke-linecap="round"/></svg></div>
+      <div class="body">
+        <span class="kind f">Ferramenta</span>
+        <h3>Calculadora de Pró-labore</h3>
+        <p>Defina quanto retirar como sócio equilibrando impostos, INSS e a saúde do caixa da empresa.</p>
+        <span class="get">Em breve</span>
+      </div>
+    </div>
+
+    <div class="item soon" data-k="conteudo">
+      <div class="cover cv-dp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 19V5a2 2 0 012-2h13v16H6a2 2 0 00-2 2zm0 0a2 2 0 002 2h13" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="body">
+        <span class="kind c">Guia</span>
+        <h3>De MEI para ME: quando migrar</h3>
+        <p>Limites do MEI, sinais de que chegou a hora de crescer e o passo a passo do desenquadramento sem sustos.</p>
+        <span class="get">Em breve</span>
+      </div>
+    </div>
+
+    <div class="item soon" data-k="conteudo">
+      <div class="cover cv-nav"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01" stroke-linecap="round"/></svg></div>
+      <div class="body">
+        <span class="kind c">Guia</span>
+        <h3>Checklist de abertura de CNPJ</h3>
+        <p>Tudo o que você precisa decidir e providenciar antes de abrir a empresa, na ordem certa.</p>
+        <span class="get">Em breve</span>
+      </div>
+    </div>
+
+    <div class="item soon" data-k="ferramenta">
+      <div class="cover cv-dp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 17l5-5 4 3 7-8" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 7h5v5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 21h18" stroke-linecap="round"/></svg></div>
+      <div class="body">
+        <span class="kind f">Ferramenta</span>
+        <h3>DRE Simplificado</h3>
+        <p>Modelo de demonstrativo de resultado em linguagem de dono: receita, custos, despesas e lucro real.</p>
+        <span class="get">Em breve</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>© 2026 Crypto Contabilidade · <a href="index.html">Conheça nosso site</a> · Materiais gratuitos produzidos pela nossa equipe</footer>
+
+<script>
+document.querySelectorAll('.chip').forEach(ch => ch.addEventListener('click', () => {
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
+  ch.classList.add('on');
+  const f = ch.dataset.f;
+  document.querySelectorAll('#grid .item').forEach(it => {
+    it.style.display = (f === 'todos' || it.dataset.k === f) ? '' : 'none';
+  });
+}));
+</script>
+</body>
+</html>
