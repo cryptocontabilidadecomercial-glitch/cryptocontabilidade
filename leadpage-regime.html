@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simples, Presumido ou Real: qual o melhor regime? | Crypto Contabilidade</title>
+<meta name="description" content="Guia gratuito: entenda as diferenças entre Simples Nacional, Lucro Presumido e Lucro Real e descubra qual pode reduzir seus impostos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1E2A44;--navy-deep:#16213A;--navy-soft:#2A3A5C;--gold:#C79A46;--gold-light:#E0B468;--gold-deep:#A87B2E;--ink:#3E4655;--ink-soft:#6B7280;--gray:#E8EAED;--cream:#F7F5F0;--radius:14px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--ink);line-height:1.7;font-size:16.5px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Sora',sans-serif;color:var(--navy);line-height:1.25}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.topbar{background:#fff;border-bottom:1px solid var(--gray);padding:16px 0}
+.brand{display:flex;align-items:center;gap:11px;width:max-content;margin:0 auto;text-decoration:none}
+.brand svg{width:38px;height:38px}
+.bn{display:flex;flex-direction:column;line-height:1.05}
+.bn b{font-family:'Chakra Petch',sans-serif;font-size:17px;letter-spacing:.14em;color:var(--navy)}
+.bn span{font-family:'Chakra Petch',sans-serif;font-size:8.5px;letter-spacing:.34em;color:var(--gold-deep);text-transform:uppercase}
+.hero{padding:72px 0 84px;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--navy-deep),var(--navy) 60%,var(--navy-soft))}
+.hero::before{content:"";position:absolute;right:-120px;top:-140px;width:520px;height:520px;border:1px solid rgba(224,180,104,.22);border-radius:50%}
+.hg{display:grid;grid-template-columns:1.02fr .98fr;gap:60px;align-items:start;position:relative;z-index:2}
+.tag{display:inline-block;font-family:'Sora',sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);background:rgba(224,180,104,.14);padding:7px 16px;border-radius:99px;margin-bottom:20px}
+.hero h1{font-size:clamp(29px,3.8vw,42px);font-weight:700;margin-bottom:18px;color:#fff}
+.hero h1 em{font-style:normal;color:var(--gold-light)}
+.hero .sub{font-size:17.5px;color:rgba(255,255,255,.78);margin-bottom:28px;max-width:500px}
+.bullets{list-style:none;display:grid;gap:13px}
+.bullets li{display:flex;gap:11px;align-items:flex-start;font-size:15.5px;color:rgba(255,255,255,.9)}
+.bullets svg{width:20px;height:20px;flex:none;margin-top:4px;stroke:var(--gold-light)}
+.formcard{background:#fff;border-radius:var(--radius);box-shadow:0 24px 64px rgba(0,0,0,.3);padding:34px;border:1px solid var(--gray)}
+.formcard h2{font-size:20px;margin-bottom:4px}
+.formcard .fs{font-size:14px;color:var(--ink-soft);margin-bottom:20px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:5px;margin-bottom:13px}
+.field label{font-family:'Sora',sans-serif;font-size:12.5px;font-weight:600;color:var(--navy)}
+.field input,.field textarea{font-family:'Inter',sans-serif;font-size:14.5px;border:1.5px solid var(--gray);border-radius:9px;padding:11px 13px;transition:.2s}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(199,154,70,.15)}
+.field input[readonly]{background:var(--cream);font-weight:600;color:var(--navy);border-color:rgba(199,154,70,.4)}
+.field textarea{resize:vertical;min-height:70px}
+.btn{width:100%;font-family:'Sora',sans-serif;font-weight:700;font-size:15.5px;padding:15px;border:0;border-radius:10px;background:var(--gold);color:var(--navy-deep);cursor:pointer;transition:.2s}
+.btn:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 12px 32px rgba(199,154,70,.35)}
+.btn:disabled{opacity:.6;cursor:default;transform:none}
+.micro{font-size:11.5px;color:var(--ink-soft);margin-top:12px;text-align:center}
+.ok{display:none;background:#E4F3E8;border:1px solid #9CCBA8;color:#20603A;border-radius:10px;padding:14px 16px;font-size:14px;margin-top:14px}
+.sec{padding:80px 0}
+.sec h2{font-size:clamp(25px,3vw,32px);margin-bottom:14px;text-align:center}
+.sec .lead{color:var(--ink-soft);text-align:center;max-width:640px;margin:0 auto 44px}
+.alt{background:var(--cream)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.fcard{background:#fff;border:1px solid var(--gray);border-radius:var(--radius);padding:28px}
+.fcard .n{font-family:'Sora',sans-serif;font-weight:700;color:var(--gold-deep);font-size:13.5px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.fcard .n::before{content:"";width:22px;height:2px;background:linear-gradient(90deg,var(--gold-deep),var(--gold-light));transform:skewX(-30deg)}
+.fcard h3{font-size:17px;margin-bottom:8px}
+.fcard p{font-size:14.5px;color:var(--ink-soft)}
+footer{background:var(--navy-deep);color:rgba(255,255,255,.6);text-align:center;padding:26px;font-size:13px}
+footer a{color:rgba(255,255,255,.75);text-decoration:none}
+@media(max-width:900px){.hg{grid-template-columns:1fr;gap:40px}.grid3{grid-template-columns:1fr}.hero{padding:52px 0 60px}.sec{padding:60px 0}.f2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="index.html" class="brand" aria-label="Voltar ao site da Crypto Contabilidade">
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#A87B2E"/><stop offset=".55" stop-color="#C79A46"/><stop offset="1" stop-color="#E7BC6A"/></linearGradient></defs>
+      <path d="M72.1 59.2 A28 28 0 1 1 72.1 24.8" fill="none" stroke="#1E2A44" stroke-width="15"/>
+      <polygon points="5,91 45.2,43.9 95,7 54.8,54.1" fill="url(#g)"/>
+    </svg>
+    <span class="bn"><b>CRYPTO</b><span>Contabilidade</span></span>
+  </a>
+</div>
+
+<section class="hero">
+  <div class="wrap hg">
+    <div>
+      <span class="tag">Guia gratuito · Regimes tributários</span>
+      <h1>Simples, Presumido ou Real: sua empresa está pagando <em>imposto a mais</em>?</h1>
+      <p class="sub">O enquadramento errado pode custar caro todos os meses. Entenda como cada regime funciona, quando cada um compensa e os sinais de que está na hora de rever o seu.</p>
+      <ul class="bullets">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Como funciona cada regime, em linguagem simples</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Faixas de faturamento, alíquotas e obrigações de cada um</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Exemplos práticos por tipo de negócio (serviços, comércio, e-commerce)</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Checklist: sinais de que seu enquadramento merece revisão</li>
+      </ul>
+    </div>
+    <div class="formcard">
+      <h2>Receba por e-mail</h2>
+      <p class="fs">Preencha os dados e o material chega no seu e-mail.</p>
+      <div class="field"><label for="item">Material</label><input id="item" type="text" value="Guia do Regime Tributário" readonly></div>
+      <div class="f2">
+        <div class="field"><label for="nome">Nome</label><input id="nome" type="text" placeholder="Seu nome" required></div>
+        <div class="field"><label for="empresa">Empresa</label><input id="empresa" type="text" placeholder="Nome da empresa" required></div>
+      </div>
+      <div class="f2">
+        <div class="field"><label for="telefone">Telefone</label><input id="telefone" type="tel" placeholder="(00) 00000-0000" required></div>
+        <div class="field"><label for="email">E-mail</label><input id="email" type="email" placeholder="voce@empresa.com.br" required></div>
+      </div>
+      <div class="field"><label for="cidade">Cidade</label><input id="cidade" type="text" placeholder="Cidade / UF" required></div>
+      <div class="field"><label for="obs">Observações (opcional)</label><textarea id="obs" placeholder="Algum detalhe sobre sua empresa ou necessidade?"></textarea></div>
+      <button class="btn" id="send" data-label="Receber gratuitamente">Receber gratuitamente</button>
+      <div class="ok" id="ok">✓ Recebido! O material será enviado para o seu e-mail. Confira também a caixa de spam.</div>
+      <p class="micro">Ao enviar, você autoriza a Crypto Contabilidade a entrar em contato por e-mail e WhatsApp, inclusive com conteúdos e novidades sobre nossos serviços.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="wrap">
+    <h2>Por que revisar o enquadramento</h2>
+    <p class="lead">O regime ideal muda conforme a empresa cresce, contrata e diversifica. O que era vantajoso na abertura pode estar corroendo a margem hoje.</p>
+    <div class="grid3">
+      <div class="fcard"><div class="n">Simples Nacional</div><h3>Nem sempre é o mais simples</h3><p>Guia unificada e menos burocracia — mas dependendo da atividade e da folha, o anexo aplicado pode pesar mais que o Presumido.</p></div>
+      <div class="fcard"><div class="n">Lucro Presumido</div><h3>Margens presumidas</h3><p>Quando a margem real do negócio é maior que a presunção legal, o Presumido costuma reduzir a conta de impostos.</p></div>
+      <div class="fcard"><div class="n">Lucro Real</div><h3>Para casos específicos</h3><p>Obrigatório acima de certos faturamentos e vantajoso para margens apertadas — exige contabilidade rigorosa em dia.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Crypto Contabilidade · <a href="index.html">Conheça nosso site</a> · <a href="biblioteca.html">Biblioteca de materiais</a></footer>
+
+<script src="leads.js"></script>
+<script>
+document.getElementById('send').addEventListener('click', () => {
+  const v = id => document.getElementById(id).value.trim();
+  enviarLead({
+    origem: "Lead Page",
+    item: v('item'),
+    nome: v('nome'), empresa: v('empresa'), telefone: v('telefone'),
+    email: v('email'), cidade: v('cidade'), obs: v('obs')
+  }, document.getElementById('send'), document.getElementById('ok'));
+});
+</script>
+</body>
+</html>
